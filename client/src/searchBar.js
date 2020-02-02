@@ -11,7 +11,7 @@ class SearchBar extends React.Component{
     handleSearch = (e) => {
         if (e.key === 'Enter') {
             console.log("Sumbit! with value " + this.state.searchQuery);
-            fetch(`/search?food=${this.state.searchQuery}`)
+            fetch(`/api/search?food=${this.state.searchQuery}`)
             .then(response => {
                 response.json().then( json =>{
                     console.log("Success! Received Json: " + JSON.stringify(json));
