@@ -26,7 +26,7 @@ class Header extends React.Component{
         <center> 
             <h1 style={{"fontFamily": "\'Merriweather\', serif","backgroundColor": "#353b48","padding":"20px", "color":"white"}}>
                 FOODUDE 
-                <img src="https://i.imgur.com/pkMF0BL.png" style="width:9vh"></img>
+                <img src="https://i.imgur.com/pkMF0BL.png" style={{"width":"9vh"}}></img>
             </h1>
         </center>
       </container>
