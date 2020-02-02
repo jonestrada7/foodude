@@ -8,12 +8,10 @@ class App extends React.Component {
   constructor(props) {
     super(props)
       this.state = {
-        foodEntries: []
+        entriesArray: []
       }
   }
   
-  // state = {foodEntries: []}
-
   componentDidMount() {
     fetch('/')    
       // .then(res => res.json())
@@ -21,16 +19,19 @@ class App extends React.Component {
       .then(res => res.json())
       .then(text => console.log(text));
   };
+  
+  assignEntriesArray = (entriesArray) => {
+    this.setState({entriesArray: entriesArray});
+  }
 
     render(){
       return <React.Fragment>
-        <SearchBar></SearchBar>
-        { this.state.foodEntries.map(foodEntry => 
+        <SearchBar assignEntriesArray={this.assignEntriesArray}></SearchBar>
+        { this.state.entriesArray.map((foodEntry,index) => 
           <Card name = {foodEntry.name} price = {foodEntry.price} 
-          description = {foodEntry.description} locations = {foodEntry.locations} image = {foodEntry.image}>
+          description = {foodEntry.description} locations = {foodEntry.locations} image = {foodEntry.image} key={index}>
           </Card>
         )
-  
         }
       </React.Fragment>
     }

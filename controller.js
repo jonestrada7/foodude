@@ -8,23 +8,19 @@ exports.getHome = async (req, res, next) => {
     // res.sendFile(path.join(__dirname, './src/test.html'));
 
     console.log("Home page activated!");
-    res.status(200).json({
-        status: "Home page: success"
-    });
+    res.sendFile(path.join(__dirname, './client/build/index.html'));
 };
 
 exports.getEntries = async (req, res, next) => {
     console.log("Search GET request activated!");
     
-    console.log(req.body.search);
+    console.log(req.query);
     
-    // var entriesArray = await foodEntry
-    //     .find({$text: {$search: req.body.search}}, function(err, data) {
-    //         if (err) throw err;
-    //     })  // Full text search
-    //     .limit(10);
-    
-    var entriesArray = [1, 2];
+    var entriesArray = await foodEntry
+        .find({$text: {$search: req.query.food}}, function(err, data) {
+            if (err) throw err;
+        })  // Full text search
+        .limit(10);
     
     res.status(200).json({ entriesArray });
 };
