@@ -11,7 +11,7 @@ class App extends React.Component {
     super(props)
       this.state = {
         entriesArray: [] ,
-        state: 0
+        state: 1
       }
   }
   

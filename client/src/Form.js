@@ -4,7 +4,7 @@ import  "./Form.css";
 class Form extends React.Component{
   
   render(){
-    return <React.Component>
+    return <React.Fragment>
        <div className="box"style={{"paddingLeft":"10%","paddingBottom":"2%"}}>
         <form action="/action_page.php">
             <div style={{"paddingTop": "10px"}} className="container">
@@ -23,12 +23,12 @@ class Form extends React.Component{
             </div>
         <div style={{"paddingRight": "20%"}} className="span12">
            Description:<br></br>
-            <textarea style="padding:1%;" id="descrip" type="text" name="description"placeholder="Type a brief description"></textarea>
+            <textarea style={{"padding": "1"}} id="descrip" type="text" name="description"placeholder="Type a brief description"></textarea>
            
        </div>
        <br></br>
         <div className="row">
-            <div style={{"padding-right":"1px","paddingTop": "10px","paddingLeft":"2%"}}className="span2">
+            <div style={{"paddingRight":"1px","paddingTop": "10px","paddingLeft":"2%"}}className="span2">
                  Tag1:<br></br>
                 <input id="tag1"type="text" name="tag1" required></input>
             </div>
@@ -44,11 +44,11 @@ class Form extends React.Component{
         <br></br>
 
         Location Name:<br></br>
-        <form autocomplete="off" action="/action_page.php">
-            <div className="autocomplete" style={{"paddingRight": "10%","padding-bottom": "2%"}}>
+        {/* <form autocomplete="off" action="/action_page.php">
+            <div className="autocomplete" style={{"paddingRight": "10%","paddingBottom": "2%"}}>
               <input style={{"width":"100%"}}id="myInput" type="text" name="myCountry" placeholder="Location" required></input>
             </div>
-          </form>
+          </form> */}
           
         
         Image:<br></br>
@@ -61,7 +61,7 @@ class Form extends React.Component{
       </form> 
     </div>
     <br></br>
-    </React.Component>
+    </React.Fragment>
 
   }
 }
