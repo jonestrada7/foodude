@@ -61,7 +61,7 @@ class Form extends React.Component{
             
             <div className = "form-group">
               <label for="type">Type Of Food</label>
-              <input id="type"type="text" className = "form-control" name="type" value={this.state.type} onChange={this.handleChange} placeholder = "Enter Price" required></input>
+              <input id="type"type="text" className = "form-control" name="type" value={this.state.type} onChange={this.handleChange} placeholder = "Enter Type of Food (e.g. pizza, boba, pasta)" required></input>
             </div>
             
             <div className = "form-group">
