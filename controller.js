@@ -19,7 +19,9 @@ exports.searchEntries = async (req, res, next) => {
     console.log(req.body.search);
     
     var entriesArray = await foodEntry
-        .find({$text: {$search: req.body.search}})  // Full text search
+        .find({$text: {$search: req.body.search}}, function(err, data) {
+            if (err) throw err;
+        })  // Full text search
         .limit(10);
     
     res.status(201).json({ entriesArray });

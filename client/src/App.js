@@ -1,17 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import './Card.js';
-import "./Form.js";
+
+import SearchBar from './SearchBar.js';
+import Card from './Card.js';
 
 
 class App extends React.Component {
-  state = {users: []}
+  
+  constructor(props) {
+    super(props)
+      this.state = {
+        foodEntries: []
+      }
+  }
+  
+  // state = {foodEntries: []}
 
   componentDidMount() {
-    fetch('/users')
+    fetch('../../controller')
       .then(res => res.json())
-      .then(users => this.setState({ users }));
+      .then(foodEntries => this.setState({ foodEntries }));
   }
 
     render(){
