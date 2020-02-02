@@ -9,7 +9,9 @@ class App extends React.Component {
   constructor(props) {
     super(props)
       this.state = {
-        entriesArray: []
+        entriesArray: [] ,
+        addPostState: false,
+        homeState: true
       }
   }
   

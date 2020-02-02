@@ -22,14 +22,14 @@ class Header extends React.Component{
                     <li style={{"fontFamily": "\'Merriweather\', serif", "backgroundColor": "#353b48","padding":"20px", "color":"white"}}><a  style={{"color":"beige","textDecoration": "none"}}href="foodude3.html">About</a></li>
                 </ul>
             </div>
-            <div>
+            <container>
                 <center> 
                     <h1 style={{"fontFamily": "\'Merriweather\', serif","backgroundColor": "#353b48","padding":"20px", "color":"white"}}>
                         FOODUDE 
                         <img src="https://i.imgur.com/pkMF0BL.png" style={{"width":"9vh"}}></img>
                     </h1>
                 </center>
-            </div>
+            </container>
         </React.Fragment>
     }
 }
