@@ -14,7 +14,8 @@ class Header extends React.Component{
        }
     
     menuClick = (position) => {
-        this.state.menuIndexClick = position;  
+        this.setState({menuIndexClick: position}); 
+        this.props.menuChoice = this.state.menuIndexClick;   
     }
 
     render(){

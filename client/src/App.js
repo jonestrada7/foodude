@@ -11,7 +11,7 @@ class App extends React.Component {
     super(props)
       this.state = {
         entriesArray: [] ,
-        state: 1
+        menuState: 0
       }
   }
   
@@ -27,8 +27,12 @@ class App extends React.Component {
     this.setState({entriesArray: entriesArray});
   }
 
+  assignMenuChoice = (menuChoice) => {
+    this.setState({menuState: menuChoice})
+  }
+
   renderPage = () => {
-    if (this.state.state == 0 ){
+    if (this.state.menuState == 0 ){
       return <React.Fragment>
         <SearchBar assignEntriesArray ={this.assignEntriesArray}></SearchBar>
         { this.state.entriesArray.map((foodEntry,index) => 
@@ -48,7 +52,7 @@ class App extends React.Component {
 
     render(){
       return <React.Fragment>
-        <Header></Header>
+        <Header menuChoice = {this.assignMenuChoice(menuChoice)}></Header>
         {this.renderPage()}
       </React.Fragment>
     }
