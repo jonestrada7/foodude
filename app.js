@@ -12,8 +12,7 @@ var bodyParser = require("body-parser");
 // Environment Variables
 dotenv.config({ path: "./config.env" });
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const router = require("./routes/router");
 
 var app = express();
 
@@ -29,8 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());  
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', router);
+// app.use('/users', usersRouter);
 
 // MONGODB STUFF
 const DB = process.env.DATABASE.replace(

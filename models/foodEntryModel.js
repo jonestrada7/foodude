@@ -26,7 +26,7 @@ const foodEntrySchema = new mongoose.Schema(
 )
 
 // Enables search by text
-foodEntrySchema.index({ tag1: 'text' });
+// foodEntrySchema.index({ tag1: 'text' });
 
 const foodEntry = mongoose.model('foodEntry', foodEntrySchema);
 
