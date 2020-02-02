@@ -27,9 +27,9 @@ class App extends React.Component {
     this.setState({entriesArray: entriesArray});
   }
 
-  assignMenuChoice = (menuChoice) => {
-    this.setState({menuChoice: menuChoice});
-  }
+  //assignMenuChoice = (menuChoice) => {
+  //  this.setState({menuChoice: menuChoice});
+  //}
 
   renderPage = () => {
     if (this.state.menuChoice == 0 ){
@@ -52,7 +52,7 @@ class App extends React.Component {
 
     render(){
       return <React.Fragment>
-        <Header assignMenuChoice = {this.assignMenuChoice}></Header>
+        <Header></Header>
         {this.renderPage()}
       </React.Fragment>
     }
