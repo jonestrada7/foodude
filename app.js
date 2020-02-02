@@ -30,7 +30,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/', router);
 // app.use('/users', usersRouter);
-app.use(express.static(path.join(__dirname, './client/build')));
+// app.use(express.static(path.join(__dirname, './client/build')));
+app.get("*", (req, res) => {
+  res.sendFile("client/build/index.html", { root: __dirname });
+});
 
 // MONGODB STUFF
 const DB = process.env.DATABASE.replace(
