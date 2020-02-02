@@ -70,8 +70,8 @@ class Form extends React.Component{
             </div>
           
             <div className = "form-group">
-              <label for="description">Food name (to display)</label>
-              <textarea name = "description" className = "form-control" rows = "3" id = "description" value={this.state.description} onChange={this.handleChange} placeholder = "Enter the full name of food you've eaten"></textarea>
+              <label for="description">Description</label>
+              <textarea name = "description" className = "form-control" rows = "3" id = "description" value={this.state.description} onChange={this.handleChange} placeholder = "Enter your experience!"></textarea>
             </div>
 
             <div className = "form-group">
@@ -81,7 +81,7 @@ class Form extends React.Component{
 
             <div className = "form-group">
               <label for = "image">Image URL</label>
-              <input id = "location" type = "text" name = "image" className = "form-control" value={this.state.image} onChange={this.handleChange}></input>
+              <input id = "location" type = "text" name = "image" className = "form-control" value={this.state.image} onChange={this.handleChange}placeholder = "Image URL"></input>
             </div>
 
             <button id="sub" type="submit" className = "btn btn-secondary btn-large">Post!!</button>
