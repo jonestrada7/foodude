@@ -7,6 +7,10 @@ const foodEntrySchema = new mongoose.Schema(
             type: String,
             required: [true, 'An entry must have a name']
         },
+        foodName: {
+            type: String,
+            required: [true, 'An entry must have a type']
+        },
         price: {
             type: Number,
             required: [true, 'An entry must have a price']
@@ -14,12 +18,9 @@ const foodEntrySchema = new mongoose.Schema(
         description: {
             type: String
         },
-        locations: [String],
+        location: String,
         image: String,
-        tag1: {
-            type: String,
-            required: [true, 'At least one tag is needed']
-        }
+        likes: Number
     }
 );
 

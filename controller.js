@@ -28,14 +28,16 @@ exports.getEntries = async (req, res, next) => {
 exports.newFoodPost = async (req, res, next) => {
     console.log("Create entry page POST activated");
     // res.sendFile(path.join(__dirname, './src/build/newFoodPost.html'));
+    // console.log(req.body);    
     
     const newEntry = await foodEntry.create({
-        name: req.body.food,
+        name: req.body.type,
+        foodName: req.body.food,
         price: req.body.price,
         description: req.body.description,
-        locations: ["CA"],
-        image: "img_url",
-        tag1: req.body.tag1
+        location: req.body.location,
+        image: req.body.image,
+        likes: Math.floor(Math.random() * 10)
     });
 
     res.status(201).json({ newEntry });

@@ -36,8 +36,6 @@ class App extends React.Component {
   toggleSideBar = () =>{
     document.getElementById("sidebar").classList.toggle('active');
   }
-  
-  
 
   // assignMenuChoice = (menuChoice) => {
   //   this.setState({menuChoice: menuChoice});
@@ -91,7 +89,7 @@ class App extends React.Component {
                   <SearchBar assignEntriesArray ={this.assignEntriesArray}></SearchBar>
                   { this.state.entriesArray.map((foodEntry,index) => 
                     <Card name = {foodEntry.name} price = {foodEntry.price} 
-                    description = {foodEntry.description} locations = {foodEntry.locations} image = {foodEntry.image} key={index}>
+                    description = {foodEntry.description} type = {foodEntry.foodName} image = {foodEntry.image} location = {foodEntry.location} likes = {foodEntry.likes} key={index}>
                     </Card>
                   )}
               </Route>
