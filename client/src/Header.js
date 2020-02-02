@@ -9,14 +9,14 @@ class Header extends React.Component{
     render(){
         return <React.Fragment>
             <div id="sidebar">
-      <div class="toggle-btn" onclick={toggleSideBar}>
-        <a>
-        <span></span>
-        <span></span>
-        <span></span>
-        </a>
-      </div>
-      <ul>
+                <div class="toggle-btn" onclick={this.toggleSideBar}>
+                <a>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                </div>
+    <ul>
        <li style={{"fontFamily": "\'Merriweather\', serif","backgroundColor": "#353b48","padding":"20px", "color":"white"}}><a style={{"color":"beige","textDecoration": "none"}} href="foodude.html">Home</a></li>
        <li style= {{"fontFamily": "\'Merriweather\', serif","backgroundColor": "#353b48","padding":"20px", "color":"white"}}><a  style={{"color":"beige","textDecoration": "none"}}href="foodude2.html">Upload</a></li>
        <li style={{"fontFamily": "\'Merriweather\', serif", "backgroundColor": "#353b48","padding":"20px", "color":"white"}}><a  style={{"color":"beige","textDecoration": "none"}}href="foodude3.html">About</a></li>
@@ -33,3 +33,5 @@ class Header extends React.Component{
         </React.Fragment>
     }
 }
+
+export default Header; 
