@@ -2,6 +2,7 @@ import React from 'react';
 
 import SearchBar from './SearchBar.js';
 import Card from './Card.js';
+import Header from './Header.js'; 
 
 class App extends React.Component {
   
@@ -26,6 +27,7 @@ class App extends React.Component {
 
     render(){
       return <React.Fragment>
+        <Header></Header>
         <SearchBar assignEntriesArray={this.assignEntriesArray}></SearchBar>
         { this.state.entriesArray.map((foodEntry,index) => 
           <Card name = {foodEntry.name} price = {foodEntry.price} 
