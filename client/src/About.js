@@ -65,3 +65,5 @@ class About extends React.Component {
     </React.Fragment>
     }
 }
+
+export default About; 

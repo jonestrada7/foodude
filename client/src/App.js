@@ -8,8 +8,8 @@ import {
 
 import SearchBar from './SearchBar.js';
 import Card from './Card.js';
-import Header from './Header.js'; 
 import Form from './Form.js'; 
+import About from "./About.js";
 
 class App extends React.Component {
   
@@ -95,6 +95,9 @@ class App extends React.Component {
               </Route>
               <Route path="/create">
                 <Form></Form>
+              </Route>
+              <Route path= "/about">
+                <About></About>
               </Route>
             </Switch>
           {this.renderPage()}
