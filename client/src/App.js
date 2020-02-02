@@ -35,7 +35,9 @@ class App extends React.Component {
   
   toggleSideBar = () =>{
     document.getElementById("sidebar").classList.toggle('active');
-   }
+  }
+  
+  
 
   // assignMenuChoice = (menuChoice) => {
   //   this.setState({menuChoice: menuChoice});

@@ -34,11 +34,11 @@ class Form extends React.Component{
             </div>
             <div style={{"paddingRight":"1px","paddingTop": "10px"}}className="span2">
                 Tag2:<br></br>
-               <input id="tag2"type="text" name="tag2" required></input>
+               <input id="tag2"type="text" name="tag2"></input>
            </div>
            <div style={{"paddingTop": "10px"}}className="span2">
                 Tag3:<br></br>
-                <input id="tag3"type="text" name="tag3" required></input>
+                <input id="tag3"type="text" name="tag3"></input>
             </div>
         </div>
         <br></br>
@@ -49,6 +49,9 @@ class Form extends React.Component{
               <input style={{"width":"100%"}}id="myInput" type="text" name="myCountry" placeholder="Location" required></input>
             </div>
           </form> */}
+        <div style={{"paddingTop": "10px"}}className="span2">
+          <input id="location" type="text" name="location" required></input>
+        </div>
           
         
         Image:<br></br>
@@ -57,7 +60,7 @@ class Form extends React.Component{
         <br></br>
         
 
-        <input id="sub" type="submit" value="Post"></input>
+        <button id="sub" type="button" className = "btn btn-secondary btn-large">Post!!</button>
       </form> 
     </div>
     <br></br>

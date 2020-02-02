@@ -45,10 +45,12 @@
         font-size: 14px;
     }
 
-    #sub{
+    /* #sub{
         font-size: 12px;
         border-radius: 8px;
-    }
+        font-family: 'Merriweather';
+        padding: 15px;
+    } */
 
     #browse{
         font-size: 12px;
