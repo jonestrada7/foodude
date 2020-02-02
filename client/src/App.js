@@ -29,7 +29,6 @@ class App extends React.Component {
 
     render(){
       return <React.Fragment>
-        <Header></Header>
         <SearchBar assignEntriesArray={this.assignEntriesArray}></SearchBar>
         { this.state.entriesArray.map((foodEntry,index) => 
           <Card name = {foodEntry.name} price = {foodEntry.price} 
