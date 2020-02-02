@@ -6,7 +6,7 @@ class Header extends React.Component{
     {
         super(props)
         this.state = {
-            menuIndexClick: 0
+            
         }
     }
     toggleSideBar = () =>{
@@ -14,8 +14,7 @@ class Header extends React.Component{
        }
     
     menuClick = (position) => {
-        this.setState({menuIndexClick: position}); 
-        this.props.menuChoice = this.state.menuIndexClick;   
+        this.props.assignMenuChoice(position);   
     }
 
     render(){
