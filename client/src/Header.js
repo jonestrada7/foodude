@@ -9,7 +9,7 @@ class Header extends React.Component{
             menuIndexClick: 0
         }
     }
-    toggleSidebar = () =>{
+    toggleSideBar = () =>{
         document.getElementById("sidebar").classList.toggle('active');
        }
     
@@ -28,9 +28,9 @@ class Header extends React.Component{
                 </a>
                 </div>
                 <ul id = "menuList">
-                    <li style={{"fontFamily": "\'Merriweather\', serif","backgroundColor": "#353b48","padding":"20px", "color":"white"}}><a style={{"color":"beige","textDecoration": "none"}} href="foodude.html">Home</a></li>
-                    <li style= {{"fontFamily": "\'Merriweather\', serif","backgroundColor": "#353b48","padding":"20px", "color":"white"}}><a  style={{"color":"beige","textDecoration": "none"}}href="foodude2.html">Upload</a></li>
-                    <li style={{"fontFamily": "\'Merriweather\', serif", "backgroundColor": "#353b48","padding":"20px", "color":"white"}}><a  style={{"color":"beige","textDecoration": "none"}}href="foodude3.html">About</a></li>
+                    <li id = "0" onClick = {this.menuClick(this.id)} style={{"fontFamily": "\'Merriweather\', serif","backgroundColor": "#353b48","padding":"20px", "color":"white"}}><a style={{"color":"beige","textDecoration": "none"}} href="foodude.html">Home</a></li>
+                    <li id = "1" onClick = {this.menuClick(this.id)} style= {{"fontFamily": "\'Merriweather\', serif","backgroundColor": "#353b48","padding":"20px", "color":"white"}}><a  style={{"color":"beige","textDecoration": "none"}}href="foodude2.html">Upload</a></li>
+                    <li id = "2" onClick = {this.menuClick(this.id)} style={{"fontFamily": "\'Merriweather\', serif", "backgroundColor": "#353b48","padding":"20px", "color":"white"}}><a  style={{"color":"beige","textDecoration": "none"}}href="foodude3.html">About</a></li>
                 </ul>
             </div>
                 <center> 

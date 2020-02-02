@@ -3,6 +3,7 @@ import React from 'react';
 import SearchBar from './SearchBar.js';
 import Card from './Card.js';
 import Header from './Header.js'; 
+import Form from './Form.js'; 
 
 class App extends React.Component {
   
@@ -10,8 +11,7 @@ class App extends React.Component {
     super(props)
       this.state = {
         entriesArray: [] ,
-        addPostState: false,
-        homeState: true
+        state: 0
       }
   }
   
@@ -27,15 +27,29 @@ class App extends React.Component {
     this.setState({entriesArray: entriesArray});
   }
 
-    render(){
+  renderPage = () => {
+    if (this.state.state == 0 ){
       return <React.Fragment>
-        <SearchBar assignEntriesArray={this.assignEntriesArray}></SearchBar>
+        <SearchBar assignEntriesArray ={this.assignEntriesArray}></SearchBar>
         { this.state.entriesArray.map((foodEntry,index) => 
           <Card name = {foodEntry.name} price = {foodEntry.price} 
           description = {foodEntry.description} locations = {foodEntry.locations} image = {foodEntry.image} key={index}>
           </Card>
         )
         }
+      </React.Fragment>
+    
+    } else {
+      return <React.Fragment>
+        <Form></Form>
+      </React.Fragment>
+    } 
+  }
+
+    render(){
+      return <React.Fragment>
+        <Header></Header>
+        {this.renderPage()}
       </React.Fragment>
     }
 }
