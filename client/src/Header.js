@@ -9,7 +9,7 @@ class Header extends React.Component{
     render(){
         return <React.Fragment>
             <div id="sidebar">
-                <div class="toggle-btn" onclick={this.toggleSideBar}>
+                <div className="toggle-btn" onClick={this.toggleSideBar}>
                 <a>
                     <span></span>
                     <span></span>
@@ -22,14 +22,14 @@ class Header extends React.Component{
        <li style={{"fontFamily": "\'Merriweather\', serif", "backgroundColor": "#353b48","padding":"20px", "color":"white"}}><a  style={{"color":"beige","textDecoration": "none"}}href="foodude3.html">About</a></li>
       </ul>
      </div>
-      <container>
+      <div className = "container">
         <center> 
             <h1 style={{"fontFamily": "\'Merriweather\', serif","backgroundColor": "#353b48","padding":"20px", "color":"white"}}>
                 FOODUDE 
                 <img src="https://i.imgur.com/pkMF0BL.png" style={{"width":"9vh"}}></img>
             </h1>
         </center>
-      </container>
+      </div>
         </React.Fragment>
     }
 }
