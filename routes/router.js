@@ -5,7 +5,7 @@ const router = express.Router();
 // Search food
 router.route("/")
     .get(controller.getHome)
-    .post(controller.searchEntries);
+    .get(controller.getEntries);
 
 router.route("/createEntry")
     .post(controller.newFoodPost);

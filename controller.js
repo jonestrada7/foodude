@@ -13,18 +13,20 @@ exports.getHome = async (req, res, next) => {
     });
 };
 
-exports.searchEntries = async (req, res, next) => {
-    console.log("Search POST request activated!");
+exports.getEntries = async (req, res, next) => {
+    console.log("Search GET request activated!");
     
     console.log(req.body.search);
     
-    var entriesArray = await foodEntry
-        .find({$text: {$search: req.body.search}}, function(err, data) {
-            if (err) throw err;
-        })  // Full text search
-        .limit(10);
+    // var entriesArray = await foodEntry
+    //     .find({$text: {$search: req.body.search}}, function(err, data) {
+    //         if (err) throw err;
+    //     })  // Full text search
+    //     .limit(10);
     
-    res.status(201).json({ entriesArray });
+    var entriesArray = [1, 2];
+    
+    res.status(200).json({ entriesArray });
 };
 
 exports.newFoodPost = async (req, res, next) => {
