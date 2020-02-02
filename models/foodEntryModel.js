@@ -19,9 +19,7 @@ const foodEntrySchema = new mongoose.Schema(
         tag1: {
             type: String,
             required: [true, 'At least one tag is needed']
-        },
-        tag2: String,
-        tag3: String
+        }
     }
 );
 

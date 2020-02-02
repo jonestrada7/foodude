@@ -35,9 +35,7 @@ exports.newFoodPost = async (req, res, next) => {
         description: req.body.description,
         locations: ["CA"],
         image: "img_url",
-        tag1: req.body.tag1,
-        tag2: req.body.tag2,
-        tag3: req.body.tag3,
+        tag1: req.body.tag1
     });
 
     res.status(201).json({ newEntry });

@@ -6,10 +6,10 @@ const router = express.Router();
 router.route("/")
     .get(controller.getHome)
     
-router.route("/search")
+router.route("/api/search")
     .get(controller.getEntries);
 
-router.route("/createEntry")
+router.route("/api/createEntry")
     .post(controller.newFoodPost);
 
 module.exports = router;

@@ -16,10 +16,10 @@ function Card(props){
                     </center>
                 </div> 
                 <div className="col-md-8" style={{"padding":"1%"}}>
-                    <h4 style={{"paddingTop": "10px","color":"beige", "paddingLeft":"1%"}}> {props.name} </h4>
-                    <h4 style={{"color":"beige","paddingLeft":"1%"}}> {props.locations} </h4>
-                    <h2 style={{"paddingLeft":"1%"}}>{props.price}</h2>
-                    <p style={{"paddingLeft":"1%","paddingRight":"1%" ,"wordWrap":"break-word"}}>{props.description}</p>
+                    <h4 style={{"paddingTop": "10px","color":"beige", "paddingLeft":"1%"}}> {props.description} </h4>
+                    <h4 style={{"color":"beige","paddingLeft":"1%"}}>Location: {props.locations} </h4>
+                    <h2 style={{"paddingLeft":"1%"}}>${props.price}</h2>
+                    <p style={{"paddingLeft":"1%","paddingRight":"1%" ,"wordWrap":"break-word"}}>Type of food: {props.name}</p>
 
             </div>
         </div>
