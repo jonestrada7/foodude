@@ -8,6 +8,7 @@ var logger = require('morgan');
 var dotenv = require("dotenv");
 var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
+var cors = require("cors");
 
 // Environment Variables
 dotenv.config({ path: "./config.env" });
