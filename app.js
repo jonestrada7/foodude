@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // cors origin URL - Allow inbound traffic from origin
 corsOptions = {
-  origin: "Your FrontEnd Website URL",
+  origin: "https://foodudebeta.herokuapp.com/",
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 app.use(cors(corsOptions));
