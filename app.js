@@ -33,7 +33,7 @@ app.use('/', router);
 app.use(express.static(path.join(__dirname, './client/build')));
 
 // MONGODB STUFF
-const DB = process.env.DATABASE.replace(
+const DB = process.env.MONGODB_URL.replace(
   "<PASSWORD>",
   process.env.DATABASE_PASSWORD
 );
