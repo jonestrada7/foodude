@@ -28,6 +28,13 @@ app.use(express.static(path.join(__dirname, './client/build')));
 app.use(bodyParser.json());  
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// cors origin URL - Allow inbound traffic from origin
+corsOptions = {
+  origin: "Your FrontEnd Website URL",
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+app.use(cors(corsOptions));
+
 app.use('/', router);
 // app.use('/users', usersRouter);
 app.use(express.static(path.join(__dirname, './client/build')));
