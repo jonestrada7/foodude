@@ -1,0 +1,2 @@
+# Foodude
+Users can accurately see the price of the foods that other people purchase and know exactly what they are paying for. Additionally, users can enter in a specific food/dish they are looking for, and the app will list relevant posts with their prices! If the user finds a dish they especially like at their favorite restaurant, they can upload it to the website and leave their price, location, and review!
