@@ -18,6 +18,7 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "mongodb": "^3.5.2",
     "mongoose": "^5.8.11",
     "morgan": "~1.9.1",
     "react-router": "^5.1.2",
